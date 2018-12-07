@@ -1,0 +1,40 @@
+﻿@model TwitterClone.Entities.Person
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+@using (Html.BeginForm("ViewPerson", "person", FormMethod.Post))
+            {
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-7">
+                    Follow :
+                    @Html.TextBox("uname", "", new { @class = "form-control" })
+                    <input type="submit" value="Find" class="btn btn-default" />
+                </div>
+                <br />               
+                <br />
+            </div>
+        </div>
+}
+   <div class="row">
+       <div class="form-group col-md-offset-1"><a href="@Url.Action("ViewAllTweets", "Person", new { Count = Model.Tweets.Count })">@Model.Tweets.Count</a> Tweets</div>
+   </div>
+        <div class="row">
+            <div class="form-group col-md-offset-1"> <a href="@Url.Action("Following", "Person", new { Count = Model.People.Count })">@Model.People.Count</a> Following</div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-offset-1"> <a href="@Url.Action("Followers", "Person", new { Count = Model.Person1.Count })">@Model.Person1.Count</a> Followers</div>
+        </div>
+    </div>
+</body>
+</html>

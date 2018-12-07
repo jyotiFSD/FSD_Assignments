@@ -1,0 +1,67 @@
+﻿@model TwitterClone.Entities.Person
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-lg-7"><h2>Welcome to My twitter Clone app</h2></div>
+    <div class="col-lg-5">
+        <h3>Welcome @Html.DisplayFor(model => model.FullName)</h3>
+    </div>
+</div>
+<br />
+<br />
+<hr />
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <ul class="nav navbar-nav navbar-right">
+            <li>@Html.ActionLink("Profile", "Edit", new { Userid = Model.User_ID })</li>
+            <li>@Html.ActionLink("Sign Out", "LogOut", "", routeValues: null, htmlAttributes: new { id = "logout" })</li>
+        </ul>
+
+    </div>
+</div>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-lg-3">@{Html.RenderPartial("~/Views/Shared/_TweetSection.cshtml",Model);}
+</div>
+        @using (Html.BeginForm("Tweet", "person", FormMethod.Post))
+            {
+        <div class="col-lg-9">
+            What's in your mind ??
+            <div class="form-group">
+                @Html.TextBox("TweetMessage", "", new { @class = "form-control" ,@length="140"})
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Tweet" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+    <div class="row">
+        <div class="col-lg-offset-3">
+            Add Twitter grid in readonly
+            <div class="form-group">
+                <dl >
+                    @foreach (var item in Model.Tweets)
+                    {
+                        <dd>
+                            @Html.ActionLink("Edit", "EditTweet", new { id = item.tweet_ID }) |
+                            @Html.ActionLink("Delete", "DeleteTweet", new { id = item.tweet_ID })  @Html.DisplayFor(modelitem => item.User_ID) | @Html.DisplayFor(modelitem => item.Message) | @Html.DisplayFor(modelitem => item.Created)
+                        </dd>
+                    }
+                </dl>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
