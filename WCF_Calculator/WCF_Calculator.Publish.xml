@@ -1,0 +1,9 @@
+<publishData>
+  <publishTarget publishUrl="http://localhost:9005/iCalculator">
+    <file relUrl="bin/WCF_Calculator.dll.config" publishTime="11/20/2018 16:54:36" />
+    <file relUrl="WCF_Calculator.Service1.svc" publishTime="11/20/2018 16:58:38" />
+    <file relUrl="bin/WCF_Calculator.pdb" publishTime="11/20/2018 16:56:35" />
+    <file relUrl="bin/WCF_Calculator.dll" publishTime="11/20/2018 16:56:35" />
+    <file relUrl="Web.config" publishTime="11/20/2018 16:54:36" />
+  </publishTarget>
+</publishData>

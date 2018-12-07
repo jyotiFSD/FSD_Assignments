@@ -1,0 +1,5 @@
+C:\Jyotiranjan\FSD_Assign\FSD_Code\WCF\WCF_Calculator\bin\Release\WCF_Calculator.dll.config
+C:\Jyotiranjan\FSD_Assign\FSD_Code\WCF\WCF_Calculator\bin\Release\WCF_Calculator.dll
+C:\Jyotiranjan\FSD_Assign\FSD_Code\WCF\WCF_Calculator\bin\Release\WCF_Calculator.pdb
+C:\Jyotiranjan\FSD_Assign\FSD_Code\WCF\WCF_Calculator\obj\Release\WCF_Calculator.dll
+C:\Jyotiranjan\FSD_Assign\FSD_Code\WCF\WCF_Calculator\obj\Release\WCF_Calculator.pdb
